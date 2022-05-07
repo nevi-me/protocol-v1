@@ -123,6 +123,8 @@ pub struct InitializeUser<'info> {
     pub state: Box<Account<'info, State>>,
     #[account(
         init,
+        seeds = [b"user_positions", user.key().as_ref()],
+        bump,
         payer = authority,
         space = 1072 + 8,
     )]
@@ -147,6 +149,8 @@ pub struct InitializeUserWithExplicitPayer<'info> {
     pub state: Box<Account<'info, State>>,
     #[account(
         init,
+        seeds = [b"user_positions", user.key().as_ref()],
+        bump,
         payer = payer,
         space = 1072 + 8,
     )]
