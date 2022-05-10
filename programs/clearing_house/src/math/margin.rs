@@ -7,7 +7,7 @@ use crate::math::position::{
 use crate::math_error;
 use crate::state::market::Markets;
 use crate::state::user::{User, UserPositions};
-use std::cell::{Ref, RefMut};
+use std::cell::Ref;
 
 use crate::math::amm::use_oracle_price_for_margin_calculation;
 use crate::math::casting::cast_to_i128;
